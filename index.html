@@ -1,169 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Full-stack Web Developer trying to keep things simple.">
-  <meta property="og:title" content="Sylvain Fertons">
-  <meta property="og:description" content="Full-stack Web Developer trying to keep things simple.">
-  <link rel="shortcut icon" href="https://www.spharian.be/img/favicon.png">
-  <link rel="preload" href="/fonts/noto-serif-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/noto-serif-700.woff2" as="font" type="font/woff2" crossorigin>
-  <style>
-    @font-face {
-      font-family: "Noto Serif";
-      font-weight: 400;
-      src: local("Noto Serif"), local("NotoSerif"),
-           url("/fonts/noto-serif-400.woff2") format("woff2"),
-           url("/fonts/noto-serif-400.woff") format("woff");
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Full-stack Web Developer trying to keep things simple.">
+<meta property="og:title" content="Sylvain Fertons">
+<meta property="og:description" content="Full-stack Web Developer trying to keep things simple.">
+<link rel="shortcut icon" href="https://www.spharian.be/img/favicon.png">
+<link rel="preload" href="/fonts/noto-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/noto-serif-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face {
+    font-family: "Noto Serif";
+    font-weight: 400;
+    src: local("Noto Serif"), local("NotoSerif"),
+         url("/fonts/noto-serif-400.woff2") format("woff2"),
+         url("/fonts/noto-serif-400.woff") format("woff");
+  }
 
-    @font-face {
-      font-family: "Noto Serif";
-      font-weight: 700;
-      src: local("Noto Serif Bold"), local("NotoSerif-Bold"),
-           url("/fonts/noto-serif-700.woff2") format("woff2"),
-           url("/fonts/noto-serif-700.woff") format("woff");
-    }
+  @font-face {
+    font-family: "Noto Serif";
+    font-weight: 700;
+    src: local("Noto Serif Bold"), local("NotoSerif-Bold"),
+         url("/fonts/noto-serif-700.woff2") format("woff2"),
+         url("/fonts/noto-serif-700.woff") format("woff");
+  }
 
-    :root {
-      --grey: #2f2f2f;
-      --light-grey: #888;
-      --yellow: #f8ee13;
-    }
+  :root {
+    --grey: #2f2f2f;
+    --light-grey: #888;
+    --yellow: #f8ee13;
+  }
 
-    ::selection {
-      background: var(--yellow);
-      color: #000;
-    }
+  ::selection {
+    background: var(--yellow);
+    color: #000;
+  }
 
+  body {
+    background: #f9f9f9;
+    color: var(--light-grey);
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 5rem 3rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    margin-bottom: 2rem;
+  }
+
+  main {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+
+  h1, h2 {
+    color: var(--grey);
+    font-family: "Noto Serif", serif;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0 0 1.2rem;
+    display: inline-block;
+    position: relative;
+  }
+
+  h2:after {
+    --underline-height: 4px;
+    content: "";
+    background: var(--yellow);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--underline-height) * -1);
+    height: var(--underline-height);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    color: var(--grey);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li[title] {
+    text-decoration: line-through;
+  }
+
+  @media only screen and (max-width: 500px) {
     body {
-      background: #f9f9f9;
-      color: var(--light-grey);
-      font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
-      line-height: 1.6;
-      margin: 5rem 3rem;
-      -webkit-font-smoothing: antialiased;
+      margin: 2rem;
     }
+  }
+</style>
+<title>Sylvain Fertons</title>
 
-    header {
-      margin-bottom: 2rem;
-    }
+<header>
+  <h1>Sylvain Fertons</h1>
+  <p>Full-stack Web Developer trying to keep things simple.</p>
+</header>
 
-    main {
-      display: grid;
-      grid-gap: 3rem;
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 800px;
-    }
+<main>
+  <section>
+    <h2>Languages</h2>
+    <ul>
+      <li>PHP</li>
+      <li>Ruby</li>
+      <li>JavaScript</li>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+  </section>
 
-    h1, h2 {
-      color: var(--grey);
-      font-family: "Noto Serif", serif;
-    }
+  <section>
+    <h2>Frameworks</h2>
+    <ul>
+      <li>Laravel</li>
+      <li>Ruby on Rails</li>
+      <li>ReactJS</li>
+      <li>VueJS</li>
+      <li title="Come on with flexbox and CSS grids do we need this anymore?">Bootstrap</li>
+    </ul>
+  </section>
 
-    h1 {
-      font-size: 1.4rem;
-    }
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="mailto:s.fertons+at+gmail+dot+com" title="My Email">Email</a></li>
+      <li><a href="https://twitter.com/spharian" title="My Twitter" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/Spharian" title="My Github" target="_blank">Github</a></li>
+    </ul>
+  </section>
+</main>
 
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      margin: 0 0 1.2rem;
-      display: inline-block;
-      position: relative;
-    }
+<script>
+  const mail = document.querySelector("[href^=mailto]");
+  mail.setAttribute("href", mail.getAttribute("href").replace("+at+", "@").replace("+dot+", "."));
 
-    h2:after {
-      --underline-height: 4px;
-      content: "";
-      background: var(--yellow);
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: calc(var(--underline-height) * -1);
-      height: var(--underline-height);
-    }
-
-    a {
-      color: inherit;
-    }
-
-    a:hover {
-      color: var(--grey);
-    }
-
-    p {
-      margin: 0;
-    }
-
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    li[title] {
-      text-decoration: line-through;
-    }
-
-    @media only screen and (max-width: 500px) {
-      body {
-        margin: 2rem;
-      }
-    }
-  </style>
-  <title>Sylvain Fertons</title>
-</head>
-<body>
-  <header>
-    <h1>Sylvain Fertons</h1>
-    <p>Full-stack Web Developer trying to keep things simple.</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>Languages</h2>
-      <ul>
-        <li>PHP</li>
-        <li>Ruby</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Frameworks</h2>
-      <ul>
-        <li>Laravel</li>
-        <li>Ruby on Rails</li>
-        <li>ReactJS</li>
-        <li>VueJS</li>
-        <li title="Come on with flexbox and CSS grids do we need this anymore?">Bootstrap</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <ul>
-        <li><a href="mailto:s.fertons+at+gmail+dot+com" title="My Email">Email</a></li>
-        <li><a href="https://twitter.com/spharian" title="My Twitter" target="_blank">Twitter</a></li>
-        <li><a href="https://github.com/Spharian" title="My Github" target="_blank">Github</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <script>
-    const mail = document.querySelector("[href^=mailto]");
-    mail.setAttribute("href", mail.getAttribute("href").replace("+at+", "@").replace("+dot+", "."));
-
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-46846527-1', 'spharian.be');
-    ga('send', 'pageview');
-  </script>
-</body>
-</html>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46846527-1', 'spharian.be');
+  ga('send', 'pageview');
+</script>
