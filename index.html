@@ -9,19 +9,19 @@
 <link rel="preload" href="/fonts/noto-serif-700.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   @font-face {
-    font-family: "Noto Serif";
+    font-family: 'Noto Serif';
     font-weight: 400;
-    src: local("Noto Serif"), local("NotoSerif"),
-         url("/fonts/noto-serif-400.woff2") format("woff2"),
-         url("/fonts/noto-serif-400.woff") format("woff");
+    src: local('Noto Serif'), local('NotoSerif'),
+         url(/fonts/noto-serif-400.woff2) format('woff2'),
+         url(/fonts/noto-serif-400.woff) format('woff');
   }
 
   @font-face {
-    font-family: "Noto Serif";
+    font-family: 'Noto Serif';
     font-weight: 700;
-    src: local("Noto Serif Bold"), local("NotoSerif-Bold"),
-         url("/fonts/noto-serif-700.woff2") format("woff2"),
-         url("/fonts/noto-serif-700.woff") format("woff");
+    src: local('Noto Serif Bold'), local('NotoSerif-Bold'),
+         url(/fonts/noto-serif-700.woff2) format('woff2'),
+         url(/fonts/noto-serif-700.woff) format('woff');
   }
 
   :root {
@@ -38,10 +38,9 @@
   body {
     background: #f9f9f9;
     color: var(--light-grey);
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
-    line-height: 1.6;
-    margin: 5rem 3rem;
+    font: medium/1.6 -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
+    margin: 5rem 3rem;
   }
 
   header {
@@ -55,9 +54,10 @@
     max-width: 800px;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     color: var(--grey);
-    font-family: "Noto Serif", serif;
+    font-family: 'Noto Serif', serif;
   }
 
   h1 {
@@ -65,22 +65,22 @@
   }
 
   h2 {
+    display: inline-block;
     font-size: 1.1rem;
     font-weight: 400;
     margin: 0 0 1.2rem;
-    display: inline-block;
     position: relative;
   }
 
   h2:after {
     --underline-height: 4px;
-    content: "";
     background: var(--yellow);
-    position: absolute;
-    left: 0;
-    right: 0;
     bottom: calc(var(--underline-height) * -1);
+    content: '';
     height: var(--underline-height);
+    left: 0;
+    position: absolute;
+    right: 0;
   }
 
   a {
@@ -96,9 +96,9 @@
   }
 
   ul {
-    padding: 0;
-    margin: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   li[title] {
@@ -115,50 +115,50 @@
 
 <header>
   <h1>Sylvain Fertons</h1>
-  <p>Full-stack Web Developer trying to keep things simple.</p>
+  <p>Full-stack Web Developer trying to keep things simple.
 </header>
 
 <main>
   <section>
     <h2>Languages</h2>
     <ul>
-      <li>PHP</li>
-      <li>Ruby</li>
-      <li>JavaScript</li>
-      <li>HTML</li>
-      <li>CSS</li>
+      <li>PHP
+      <li>Ruby
+      <li>JavaScript
+      <li>HTML
+      <li>CSS
     </ul>
   </section>
 
   <section>
     <h2>Frameworks</h2>
     <ul>
-      <li>Laravel</li>
-      <li>Ruby on Rails</li>
-      <li>ReactJS</li>
-      <li>VueJS</li>
-      <li title="Come on with flexbox and CSS grids do we need this anymore?">Bootstrap</li>
+      <li>Laravel
+      <li>Ruby on Rails
+      <li>ReactJS
+      <li>VueJS
+      <li title="Come on with flexbox and CSS grids do we need this anymore?">Bootstrap
     </ul>
   </section>
 
   <section>
     <h2>Contact</h2>
     <ul>
-      <li><a href="mailto:s.fertons+at+gmail+dot+com" title="My Email">Email</a></li>
-      <li><a href="https://twitter.com/spharian" title="My Twitter" target="_blank">Twitter</a></li>
-      <li><a href="https://github.com/Spharian" title="My Github" target="_blank">Github</a></li>
+      <li><a href="mailto:s.fertons+at+gmail+dot+com" title="My Email">Email</a>
+      <li><a href="https://twitter.com/spharian" title="My Twitter" target="_blank">Twitter</a>
+      <li><a href="https://github.com/Spharian" title="My Github" target="_blank">Github</a>
     </ul>
   </section>
 </main>
 
 <script>
-  const mail = document.querySelector("[href^=mailto]");
-  mail.setAttribute("href", mail.getAttribute("href").replace("+at+", "@").replace("+dot+", "."));
+  const mail = document.querySelector('[href^=mailto]');
+  mail.setAttribute('href', mail.getAttribute('href').replace('+at+', '@').replace('+dot+', '.'));
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-46846527-1', 'spharian.be');
   ga('send', 'pageview');
 </script>
