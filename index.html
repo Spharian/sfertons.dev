@@ -4,9 +4,10 @@
 <meta name="description" content="Full-stack Web Developer trying to keep things simple.">
 <meta property="og:title" content="Sylvain Fertons">
 <meta property="og:description" content="Full-stack Web Developer trying to keep things simple.">
-<link rel="shortcut icon" href="https://www.spharian.be/img/favicon.png">
+<link rel="shortcut icon" href="https://www.sfertons.dev/img/favicon.png">
 <link rel="preload" href="/fonts/noto-serif-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/noto-serif-700.woff2" as="font" type="font/woff2" crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZQ6QCL017"></script>
 <style>
   @font-face {
     font-family: 'Noto Serif';
@@ -144,7 +145,7 @@
   <section>
     <h2>Contact</h2>
     <ul>
-      <li><a href="mailto:s.fertons+at+gmail+dot+com" title="My Email">Email</a>
+      <li><a href="mailto:s.fertons~at~gmail~dot~com" title="My Email">Email</a>
       <li><a href="https://twitter.com/spharian" title="My Twitter" target="_blank">Twitter</a>
       <li><a href="https://github.com/Spharian" title="My Github" target="_blank">Github</a>
     </ul>
@@ -152,13 +153,13 @@
 </main>
 
 <script>
-  const mail = document.querySelector('[href^=mailto]');
-  mail.setAttribute('href', mail.getAttribute('href').replace('+at+', '@').replace('+dot+', '.'));
+  const mail = document.querySelector('[href^=mailto]')
+  mail.setAttribute('href', mail.getAttribute('href').replace('~at~', '@').replace('~dot~', '.'))
 
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-46846527-1', 'spharian.be');
-  ga('send', 'pageview');
+  // Google Analytics
+  window.dataLayer = window.dataLayer || []
+  function gtag(){ dataLayer.push(arguments) }
+  gtag('js', new Date())
+
+  gtag('config', 'G-RZQ6QCL017')
 </script>
